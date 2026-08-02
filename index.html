@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nhà Việt Kết Nối — Combo FTTH+Camera, SIM, Camera & Điện mặt trời</title>
+<meta name="description" content="Combo Internet + Camera ưu đãi, SIM 4G/5G, camera an ninh và điện mặt trời — tư vấn nhanh qua Zalo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<script>
+/* ============================================================
+   ĐIỀN THÔNG TIN CỦA BẠN Ở ĐÂY — KHÔNG CẦN BIẾT LẬP TRÌNH
+   Sau khi triển khai web, mỗi khi cần đổi giá, đổi gói, đổi số
+   Zalo... chỉ cần sửa trong khối này rồi lưu (save) lại file
+   là trang web sẽ tự cập nhật. Nhớ giữ đúng dấu ngoặc { } [ ]
+   và dấu phẩy , giữa các dòng.
+   ============================================================ */
+window.SITE_DATA = {
+  // Tên cửa hàng / thương hiệu hiển thị trên đầu trang
+  shopName: "Nhà Việt Kết Nối",
+
+  // Câu mô tả ngắn dưới tên (slogan)
+  tagline: "Lắp một lần, dùng an tâm — mạng, camera & điện mặt trời cho tổ ấm của bạn",
+
+  // Link Zalo — đổi số điện thoại thành số Zalo thật của bạn
+  // Cú pháp: https://zalo.me/SỐ_ĐIỆN_THOẠI (không có số 0 ở đầu, ví dụ 0901234567 -> 84901234567)
+  zaloLink: "https://zalo.me/84900000000",
+
+  // Số điện thoại hiển thị (để khách gọi trực tiếp nếu muốn)
+  hotline: "0900 000 000",
+
+  // Địa chỉ / khu vực phục vụ hiển thị ở cuối trang
+  serviceArea: "Phục vụ tại Cần Thơ và các tỉnh lân cận",
+
+  // ==========================================================
+  // CÁC NHÓM GÓI DỊCH VỤ — mỗi nhóm là 1 khối trong "categories"
+  // Mỗi nhóm có nhiều "plans" (gói). Bạn có thể thêm hoặc xoá
+  // gói bằng cách copy/xoá cả khối { ... } bên trong plans: [ ]
+  // ==========================================================
+  // ==========================================================
+  // KHUYẾN MÃI COMBO INTERNET + CAMERA (thay cho gói WiFi đơn lẻ)
+  // Dữ liệu theo chính sách dịch vụ cố định băng rộng — sửa ngày,
+  // giá, mã gói tại đây khi có chương trình mới.
+  // ==========================================================
+  comboPromo: {
+    period: "01/08 – 30/09/2026",
+    area: "Toàn quốc",
+    eyebrow: "FTTH & Home Camera",
+    title: "Combo Internet + Camera",
+    description: "Hòa mạng combo tiết kiệm hơn mua lẻ, hoặc lắp thêm camera cho thuê bao FTTH đang dùng — ưu đãi áp dụng trong khung thời gian trên.",
+    program2: {
+      badge: "Chương trình 2",
+      title: "Combo FTTH + Camera giá ưu đãi",
+      subtitle: "Combo tiết kiệm — an tâm toàn diện",
+      audience: "Khách hàng hòa mạng mới Combo FTTH + Camera theo gói cước NETCB4, MESHCB4",
+      joinFee: "300.000đ (đã gồm VAT)",
+      comboFormula: "Giá gói FTTH đơn lẻ + 10.000đ/tháng (đã gồm VAT)",
+      priceTable: [
+        { code: "NETCB4_T",  price: "205.000", area: "32 tỉnh và ngoại thành Hà Nội, TP. Hồ Chí Minh" },
+        { code: "MESHCB4_T", price: "220.000", area: "32 tỉnh và ngoại thành Hà Nội, TP. Hồ Chí Minh" },
+        { code: "NETCB4_H",  price: "245.000", area: "Nội thành Hà Nội" },
+        { code: "MESHCB4_H", price: "265.000", area: "Nội thành Hà Nội, TP. Hồ Chí Minh" }
+      ],
+      benefits: [
+        "Được trang bị 01 Camera trong nhà hoặc 01 Camera ngoài trời",
+        "Miễn phí gói Cloud lưu trữ 01 ngày trong suốt thời gian duy trì sử dụng FTTH"
+      ]
+    },
+    program3: {
+      badge: "Chương trình 3",
+      title: "Ưu đãi Camera cho thuê bao FTTH hiện hữu",
+      subtitle: "Dành cho khách đang dùng FTTH, muốn lắp thêm Camera",
+      audience: "Khách hàng đang sử dụng FTTH và có nhu cầu lắp Camera",
+      condition: "Đóng trước 06 hoặc 12 tháng cước một trong các gói Cloud: 01, 03, 07, 15 hoặc 30 ngày",
+      note: "Ưu đãi phí hòa mạng Camera — áp dụng cho Camera đầu tiên",
+      newFromLabel: "Điểm mới từ 01/08/2026",
+      tier24: {
+        label: "KH FTTH sử dụng từ 24 tháng trở lên",
+        rows: [
+          { code: "Cloud01_20K", before: "300.000đ", after: "0đ — miễn phí" },
+          { code: "Cloud03_30K", before: "150.000đ", after: "0đ — miễn phí" }
+        ]
+      },
+      under24: {
+        label: "KH FTTH dưới 24 tháng",
+        fee: "200.000đ"
+      }
+    }
+  },
+
+  categories: [
+    {
+      id: "sim",
+      accent: "teal",
+      eyebrow: "SIM & mạng di động",
+      title: "Gói SIM + mạng 4G/5G",
+      description: "SIM chính chủ, đăng ký hộ tận nơi, gói cước data thoải mái lướt mạng, gọi thả ga.",
+      plans: [
+        {
+          name: "Sinh viên",
+          price: "70.000",
+          unit: "đ / tháng",
+          features: [
+            "4GB tốc độ cao / ngày",
+            "Miễn phí gọi nội mạng dưới 10 phút",
+            "Đăng ký & giao SIM tận nơi"
+          ],
+          highlight: false
+        },
+        {
+          name: "Gia đình",
+          price: "120.000",
+          unit: "đ / tháng",
+          features: [
+            "6GB tốc độ cao / ngày",
+            "Miễn phí gọi nội mạng không giới hạn",
+            "100 phút gọi ngoại mạng"
+          ],
+          highlight: true
+        },
+        {
+          name: "Kinh doanh",
+          price: "180.000",
+          unit: "đ / tháng",
+          features: [
+            "Data không giới hạn (giảm tốc sau 10GB/ngày)",
+            "Gọi thoại không giới hạn nội & ngoại mạng",
+            "Hỗ trợ chuyển đổi 5G miễn phí"
+          ],
+          highlight: false
+        }
+      ]
+    },
+    {
+      id: "camera",
+      accent: "rust",
+      eyebrow: "An ninh & giám sát",
+      title: "Camera an ninh trọn gói",
+      description: "Trọn bộ từ camera, dây, lắp đặt đến lưu trữ — xem trực tiếp qua điện thoại mọi lúc.",
+      plans: [
+        {
+          name: "1 mắt camera",
+          price: "990.000",
+          unit: "đ / trọn gói",
+          features: [
+            "1 camera ngoài trời, hồng ngoại ban đêm",
+            "Xem qua app điện thoại miễn phí",
+            "Lắp đặt trong ngày, bảo hành 12 tháng"
+          ],
+          highlight: false
+        },
+        {
+          name: "2 mắt camera",
+          price: "1.790.000",
+          unit: "đ / trọn gói",
+          features: [
+            "2 camera trong/ngoài, đàm thoại 2 chiều",
+            "Lưu trữ 7 ngày kèm thẻ nhớ 128GB",
+            "Cảnh báo chuyển động qua điện thoại"
+          ],
+          highlight: true
+        },
+        {
+          name: "4 mắt camera",
+          price: "3.290.000",
+          unit: "đ / trọn gói",
+          features: [
+            "4 camera phủ toàn bộ nhà/cửa hàng",
+            "Đầu ghi hình riêng, lưu trữ 15 ngày",
+            "Hỗ trợ xem lại & xuất video khi cần"
+          ],
+          highlight: false
+        }
+      ]
+    },
+    {
+      id: "solar",
+      accent: "amber",
+      eyebrow: "Điện mặt trời",
+      title: "Hệ thống năng lượng mặt trời",
+      description: "Giảm tiền điện hàng tháng, lắp đặt theo diện tích mái và nhu cầu sử dụng thực tế.",
+      plans: [
+        {
+          name: "Hộ gia đình nhỏ",
+          price: "35.000.000",
+          unit: "đ trọn gói",
+          features: [
+            "Công suất 3 kWp — đủ cho nhà 3–4 người",
+            "Tiết kiệm ước tính 600.000–900.000đ/tháng",
+            "Bảo hành tấm pin 10 năm"
+          ],
+          highlight: false
+        },
+        {
+          name: "Hộ gia đình vừa",
+          price: "58.000.000",
+          unit: "đ trọn gói",
+          features: [
+            "Công suất 5 kWp — phù hợp nhà có máy lạnh",
+            "Tiết kiệm ước tính 1.000.000–1.500.000đ/tháng",
+            "Kèm bộ giám sát sản lượng qua app"
+          ],
+          highlight: true
+        },
+        {
+          name: "Hộ kinh doanh",
+          price: "95.000.000",
+          unit: "đ trọn gói",
+          features: [
+            "Công suất 10 kWp — cho quán, xưởng nhỏ",
+            "Hỗ trợ hồ sơ đấu nối với điện lực",
+            "Đội kỹ thuật bảo trì định kỳ miễn phí năm đầu"
+          ],
+          highlight: false
+        }
+      ]
+    }
+  ]
+};
+</script>
+
+<style>
+  :root{
+    --cream:#F7F4EE;
+    --navy:#0F2A3D;
+    --ink:#16232B;
+    --teal:#2B8C87;
+    --amber:#E8A33D;
+    --rust:#B23A48;
+    --line: rgba(15,42,61,0.14);
+    --radius: 14px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Space Grotesk',sans-serif;
+    letter-spacing:-0.01em;
+    color:var(--navy);
+    margin:0;
+  }
+  .mono{ font-family:'IBM Plex Mono',monospace; }
+  a{ color:inherit; }
+  img,svg{ display:block; max-width:100%; }
+  :focus-visible{ outline:3px solid var(--teal); outline-offset:2px; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 24px; }
+
+  /* ---------- Header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:40;
+    background:rgba(247,244,238,0.9);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 24px; max-width:1120px; margin:0 auto;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; font-weight:700; font-size:1.05rem; }
+  .brand .dot{ width:10px;height:10px;border-radius:50%;background:var(--amber); }
+  .nav-links{ display:flex; gap:22px; font-size:0.92rem; font-weight:500; }
+  .nav-links a{ text-decoration:none; opacity:0.75; }
+  .nav-links a:hover{ opacity:1; }
+  @media (max-width:720px){ .nav-links{ display:none; } }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:12px 22px; border-radius:999px; font-weight:600; font-size:0.95rem;
+    text-decoration:none; border:1px solid transparent; cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-primary{ background:var(--navy); color:var(--cream); }
+  .btn-primary:hover{ box-shadow:0 8px 20px rgba(15,42,61,0.25); }
+  .btn-ghost{ background:transparent; border-color:var(--navy); color:var(--navy); }
+  .btn-sm{ padding:9px 16px; font-size:0.85rem; }
+
+  /* ---------- Hero ---------- */
+  .hero{ padding:64px 0 40px; }
+  .hero-grid{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center;
+  }
+  @media (max-width:860px){ .hero-grid{ grid-template-columns:1fr; } }
+  .eyebrow{
+    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:0.78rem;
+    letter-spacing:0.08em; text-transform:uppercase; color:var(--teal);
+    background:rgba(43,140,135,0.1); padding:6px 12px; border-radius:999px;
+    margin-bottom:18px; font-weight:600;
+  }
+  .hero h1{ font-size:clamp(2.1rem, 4.5vw, 3.3rem); line-height:1.08; font-weight:700; }
+  .hero p.lead{ margin-top:18px; font-size:1.1rem; color:#3c4d57; max-width:46ch; }
+  .hero-cta{ display:flex; gap:14px; margin-top:30px; flex-wrap:wrap; }
+
+  .hero-art{ position:relative; }
+  .hero-art svg{ width:100%; height:auto; }
+  @media (prefers-reduced-motion: no-preference){
+    .pulse{ animation:pulse 2.4s ease-in-out infinite; transform-origin:center; }
+    .pulse:nth-child(2){ animation-delay:.25s; }
+    .pulse:nth-child(3){ animation-delay:.5s; }
+    .glow{ animation:glow 3.2s ease-in-out infinite; }
+  }
+  @keyframes pulse{ 0%,100%{ opacity:.35; } 50%{ opacity:1; } }
+  @keyframes glow{ 0%,100%{ opacity:.55; } 50%{ opacity:1; } }
+
+  /* ---------- Trust strip ---------- */
+  .trust{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#EFEBE1; }
+  .trust-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+    padding:22px 0; text-align:center;
+  }
+  @media (max-width:640px){ .trust-grid{ grid-template-columns:1fr; gap:14px; } }
+  .trust-item{ font-size:0.92rem; font-weight:600; color:var(--navy); }
+  .trust-item span{ display:block; font-weight:400; font-size:0.82rem; color:#5b6a72; margin-top:2px; }
+
+  /* ---------- Category sections ---------- */
+  .category{ padding:72px 0; border-bottom:1px solid var(--line); scroll-margin-top:76px; }
+  .category:last-of-type{ border-bottom:none; }
+  .cat-head{ max-width:640px; margin-bottom:36px; }
+  .cat-head .eyebrow.teal{ color:var(--teal); background:rgba(43,140,135,0.1); }
+  .cat-head .eyebrow.amber{ color:#8a5a12; background:rgba(232,163,61,0.16); }
+  .cat-head .eyebrow.rust{ color:var(--rust); background:rgba(178,58,72,0.1); }
+  .cat-head h2{ font-size:clamp(1.5rem, 3vw, 2rem); margin-top:8px; }
+  .cat-head p{ margin-top:10px; color:#3c4d57; }
+
+  .plans-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
+  }
+  @media (max-width:900px){ .plans-grid{ grid-template-columns:1fr; } }
+
+  .plan-card{
+    background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+    padding:26px 24px 24px; display:flex; flex-direction:column; gap:16px;
+    position:relative;
+  }
+  .plan-card.is-highlight{
+    border-color:var(--navy); box-shadow:0 14px 30px rgba(15,42,61,0.12);
+  }
+  .tier-badge{
+    font-family:'IBM Plex Mono',monospace; font-size:0.72rem; font-weight:600;
+    color:#8a97a0; letter-spacing:0.06em;
+  }
+  .plan-name{ font-size:1.15rem; font-weight:700; color:var(--navy); }
+  .plan-price{ display:flex; align-items:baseline; gap:6px; }
+  .plan-price .amount{ font-family:'IBM Plex Mono',monospace; font-size:1.5rem; font-weight:600; color:var(--navy); }
+  .plan-price .unit{ font-size:0.8rem; color:#6b7880; }
+  .plan-badge{
+    position:absolute; top:-11px; right:20px; background:var(--amber); color:var(--navy);
+    font-size:0.72rem; font-weight:700; padding:4px 10px; border-radius:999px;
+  }
+  .plan-features{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px; flex:1; }
+  .plan-features li{ display:flex; gap:9px; font-size:0.92rem; color:#2c3a41; }
+  .plan-features li::before{
+    content:"✓"; color:var(--teal); font-weight:700; flex-shrink:0;
+  }
+  .accent-rust .plan-features li::before{ color:var(--rust); }
+  .accent-amber .plan-features li::before{ color:#8a5a12; }
+  .plan-cta{ margin-top:6px; justify-content:center; width:100%; }
+
+  /* ---------- Combo promo (Chương trình 2 & 3) ---------- */
+  .promo-info{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+  .promo-pill{
+    display:inline-flex; align-items:center; gap:7px;
+    font-family:'IBM Plex Mono',monospace; font-size:0.78rem; font-weight:600;
+    background:#EFEBE1; color:var(--navy); padding:7px 13px; border-radius:999px;
+  }
+  .promo-grid{ display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:stretch; }
+  @media (max-width:900px){ .promo-grid{ grid-template-columns:1fr; } }
+
+  .promo-card{
+    background:#fff; border:1px solid var(--line); border-radius:18px;
+    padding:28px 26px; display:flex; flex-direction:column; gap:18px;
+  }
+  .promo-card.p2{ border-top:4px solid var(--teal); }
+  .promo-card.p3{ border-top:4px solid var(--rust); }
+
+  .promo-head .badge-num{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono',monospace; font-size:0.75rem; font-weight:600;
+    letter-spacing:0.05em; text-transform:uppercase; color:var(--teal);
+  }
+  .promo-card.p3 .promo-head .badge-num{ color:var(--rust); }
+  .promo-head h3{ font-size:1.25rem; margin-top:8px; }
+  .promo-head .subtitle{ font-size:0.88rem; color:#6b7880; margin-top:4px; }
+
+  .promo-meta{ display:flex; flex-direction:column; gap:10px; font-size:0.9rem; }
+  .promo-meta .row{ display:flex; gap:10px; }
+  .promo-meta .label{ flex:0 0 108px; font-weight:600; color:var(--navy); font-size:0.82rem; }
+  .promo-meta .value{ color:#2c3a41; }
+
+  .price-table{ width:100%; border-collapse:collapse; font-size:0.85rem; margin-top:2px; }
+  .price-table th{
+    background:var(--navy); color:var(--cream); font-weight:600; text-align:left;
+    padding:9px 10px; font-size:0.75rem; letter-spacing:0.03em;
+  }
+  .price-table td{ padding:9px 10px; border-bottom:1px solid var(--line); color:#2c3a41; }
+  .price-table tr:last-child td{ border-bottom:none; }
+  .price-table td.code{ font-family:'IBM Plex Mono',monospace; font-weight:600; color:var(--navy); }
+  .price-table td.amt{ font-family:'IBM Plex Mono',monospace; font-weight:600; white-space:nowrap; }
+
+  .benefit-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px; }
+  .benefit-list li{ display:flex; gap:9px; font-size:0.9rem; color:#2c3a41; }
+  .benefit-list li::before{ content:"✓"; color:var(--teal); font-weight:700; flex-shrink:0; }
+
+  .tier-block{ background:var(--cream); border:1px solid var(--line); border-radius:12px; padding:16px; }
+  .tier-block .tier-label{ font-size:0.82rem; font-weight:600; color:var(--navy); margin-bottom:10px; }
+  .compare-row{
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+    padding:8px 0; border-top:1px solid var(--line);
+  }
+  .compare-row:first-of-type{ border-top:none; }
+  .compare-row .code{ font-family:'IBM Plex Mono',monospace; font-size:0.82rem; font-weight:600; color:var(--navy); flex:1; }
+  .compare-row .before{ font-size:0.82rem; color:#8a97a0; text-decoration:line-through; }
+  .compare-row .arrow{ color:#8a97a0; font-size:0.8rem; }
+  .compare-row .after{
+    font-family:'IBM Plex Mono',monospace; font-size:0.82rem; font-weight:700; color:#1c7a4b;
+    background:rgba(28,122,75,0.1); padding:3px 9px; border-radius:999px;
+  }
+  .under24-row{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-top:12px; padding-top:12px; border-top:1px dashed var(--line);
+    font-size:0.85rem;
+  }
+  .under24-row .amt{ font-family:'IBM Plex Mono',monospace; font-weight:700; color:var(--navy); }
+  .promo-note{ font-size:0.78rem; color:#8a97a0; line-height:1.5; }
+
+  /* ---------- Footer ---------- */
+  footer{ background:var(--navy); color:var(--cream); padding:52px 0 28px; }
+  .footer-grid{ display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap; }
+  footer h3{ color:var(--cream); font-size:1.2rem; }
+  footer p{ color:rgba(247,244,238,0.75); margin-top:8px; max-width:36ch; }
+  .footer-contact{ display:flex; flex-direction:column; gap:10px; font-size:0.95rem; }
+  .footer-contact a{ text-decoration:none; }
+  .footer-bottom{
+    margin-top:40px; padding-top:20px; border-top:1px solid rgba(247,244,238,0.15);
+    font-size:0.8rem; color:rgba(247,244,238,0.55); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <div class="brand"><span class="dot"></span><span id="brand-name">—</span></div>
+    <nav class="nav-links">
+      <a href="#combo">Combo FTTH+Camera</a>
+      <a href="#sim">SIM & mạng</a>
+      <a href="#camera">Camera</a>
+      <a href="#solar">Điện mặt trời</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" id="nav-zalo" target="_blank" rel="noopener">Chat Zalo</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Tổ ấm kết nối</span>
+      <h1 id="hero-title">Kết nối Viettel,<br>an tâm mọi nhà.</h1>
+      <p class="lead" id="hero-tagline">—</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" id="hero-zalo" target="_blank" rel="noopener">Nhắn Zalo tư vấn ngay</a>
+        <a class="btn btn-ghost" href="#combo">Xem các gói cước</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 340" xmlns="http://www.w3.org/2000/svg">
+        <!-- sun -->
+        <circle class="glow" cx="330" cy="60" r="26" fill="var(--amber)" opacity="0.85"/>
+        <g stroke="var(--amber)" stroke-width="4" stroke-linecap="round" class="glow" opacity="0.7">
+          <line x1="330" y1="14" x2="330" y2="0"/>
+          <line x1="330" y1="120" x2="330" y2="106"/>
+          <line x1="274" y1="60" x2="260" y2="60"/>
+          <line x1="400" y1="60" x2="386" y2="60"/>
+        </g>
+        <!-- roof with solar panels -->
+        <path d="M60 190 L210 90 L360 190 Z" fill="none" stroke="var(--navy)" stroke-width="4" stroke-linejoin="round"/>
+        <g stroke="var(--navy)" stroke-width="2.5">
+          <rect x="150" y="120" width="34" height="22" fill="rgba(232,163,61,0.35)"/>
+          <rect x="188" y="120" width="34" height="22" fill="rgba(232,163,61,0.35)"/>
+          <rect x="226" y="120" width="34" height="22" fill="rgba(232,163,61,0.35)"/>
+        </g>
+        <!-- antenna with signal arcs -->
+        <line x1="210" y1="90" x2="210" y2="46" stroke="var(--teal)" stroke-width="4"/>
+        <circle cx="210" cy="42" r="4" fill="var(--teal)"/>
+        <g fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round">
+          <path class="pulse" d="M190 42 A28 28 0 0 1 230 42" opacity="0.9"/>
+          <path class="pulse" d="M178 42 A42 42 0 0 1 242 42" opacity="0.6"/>
+          <path class="pulse" d="M166 42 A56 56 0 0 1 254 42" opacity="0.35"/>
+        </g>
+        <!-- house body -->
+        <rect x="80" y="190" width="260" height="120" fill="#fff" stroke="var(--navy)" stroke-width="4"/>
+        <!-- door -->
+        <rect x="195" y="245" width="30" height="65" fill="var(--navy)"/>
+        <!-- window with wifi router -->
+        <rect x="110" y="215" width="55" height="45" fill="rgba(43,140,135,0.08)" stroke="var(--navy)" stroke-width="3"/>
+        <g fill="none" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round">
+          <path class="pulse" d="M124 248 A14 14 0 0 1 152 248"/>
+          <path class="pulse" d="M130 248 A8 8 0 0 1 146 248"/>
+        </g>
+        <circle cx="138" cy="248" r="2.5" fill="var(--teal)"/>
+        <!-- camera on eave -->
+        <g transform="translate(272,196)">
+          <rect x="0" y="0" width="34" height="16" rx="6" fill="var(--rust)"/>
+          <circle cx="30" cy="8" r="5" fill="var(--navy)"/>
+          <path class="pulse" d="M36 -4 L46 -10 M36 20 L46 26" stroke="var(--rust)" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap trust-grid">
+    <div class="trust-item">Khảo sát &amp; báo giá<span>Miễn phí, không phát sinh</span></div>
+    <div class="trust-item">Lắp đặt trong 24h<span>Kể từ lúc xác nhận</span></div>
+    <div class="trust-item">Hỗ trợ sau lắp đặt<span>Qua Zalo, phản hồi trong ngày</span></div>
+  </div>
+</section>
+
+<section class="category" id="combo">
+  <div class="wrap">
+    <div class="cat-head">
+      <span class="eyebrow teal" id="combo-eyebrow">—</span>
+      <h2 id="combo-title">—</h2>
+      <p id="combo-desc">—</p>
+      <div class="promo-info" id="combo-info"></div>
+    </div>
+    <div class="promo-grid" id="combo-grid"></div>
+  </div>
+</section>
+
+<main id="categories"></main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <h3 id="footer-brand">—</h3>
+      <p id="footer-area">—</p>
+    </div>
+    <div class="footer-contact">
+      <a class="btn btn-primary btn-sm" id="footer-zalo" target="_blank" rel="noopener">Nhắn Zalo</a>
+      <span id="footer-hotline"></span>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year"></span> <span id="footer-brand-2">—</span></span>
+    <span>Trang được cập nhật thủ công — sửa nội dung trong file index.html</span>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   TỪ ĐÂY TRỞ XUỐNG LÀ PHẦN HIỂN THỊ — KHÔNG CẦN SỬA
+   ============================================================ */
+(function(){
+  const data = window.SITE_DATA;
+
+  document.getElementById('brand-name').textContent = data.shopName;
+  document.getElementById('hero-tagline').textContent = data.tagline;
+  document.getElementById('footer-brand').textContent = data.shopName;
+  document.getElementById('footer-brand-2').textContent = data.shopName;
+  document.getElementById('footer-area').textContent = data.serviceArea;
+  document.getElementById('footer-hotline').textContent = 'Hotline: ' + data.hotline;
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  ['nav-zalo','hero-zalo','footer-zalo'].forEach(id=>{
+    document.getElementById(id).href = data.zaloLink;
+  });
+
+  /* ---- Khối Combo Internet + Camera (Chương trình 2 & 3) ---- */
+  (function renderCombo(){
+    const promo = data.comboPromo;
+    if(!promo) return;
+
+    document.getElementById('combo-eyebrow').textContent = promo.eyebrow;
+    document.getElementById('combo-title').textContent = promo.title;
+    document.getElementById('combo-desc').textContent = promo.description;
+    document.getElementById('combo-info').innerHTML = `
+      <span class="promo-pill">📅 ${promo.period}</span>
+      <span class="promo-pill">📍 ${promo.area}</span>
+    `;
+
+    const grid = document.getElementById('combo-grid');
+
+    // Chương trình 2
+    const p2 = promo.program2;
+    const card2 = document.createElement('div');
+    card2.className = 'promo-card p2';
+    card2.innerHTML = `
+      <div class="promo-head">
+        <span class="badge-num">★ ${p2.badge}</span>
+        <h3>${p2.title}</h3>
+        <div class="subtitle">${p2.subtitle}</div>
+      </div>
+      <div class="promo-meta">
+        <div class="row"><span class="label">Đối tượng</span><span class="value">${p2.audience}</span></div>
+        <div class="row"><span class="label">Phí hòa mạng</span><span class="value">${p2.joinFee}</span></div>
+        <div class="row"><span class="label">Giá combo</span><span class="value">${p2.comboFormula}</span></div>
+      </div>
+      <table class="price-table">
+        <thead><tr><th>Gói cước combo</th><th>Giá cước (đ/tháng)</th><th>Khu vực áp dụng</th></tr></thead>
+        <tbody>
+          ${p2.priceTable.map(r=>`
+            <tr>
+              <td class="code">${r.code}</td>
+              <td class="amt">${r.price}</td>
+              <td>${r.area}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+      <ul class="benefit-list">${p2.benefits.map(b=>`<li>${b}</li>`).join('')}</ul>
+    `;
+    const cta2 = document.createElement('a');
+    cta2.className = 'btn btn-primary plan-cta';
+    cta2.href = data.zaloLink; cta2.target = '_blank'; cta2.rel = 'noopener';
+    cta2.textContent = 'Đăng ký combo qua Zalo';
+    card2.appendChild(cta2);
+    grid.appendChild(card2);
+
+    // Chương trình 3
+    const p3 = promo.program3;
+    const card3 = document.createElement('div');
+    card3.className = 'promo-card p3';
+    card3.innerHTML = `
+      <div class="promo-head">
+        <span class="badge-num">◔ ${p3.badge}</span>
+        <h3>${p3.title}</h3>
+        <div class="subtitle">${p3.subtitle}</div>
+      </div>
+      <div class="promo-meta">
+        <div class="row"><span class="label">Đối tượng</span><span class="value">${p3.audience}</span></div>
+        <div class="row"><span class="label">Điều kiện</span><span class="value">${p3.condition}</span></div>
+        <div class="row"><span class="label">Ưu đãi</span><span class="value">${p3.note}</span></div>
+      </div>
+      <div class="tier-block">
+        <div class="tier-label">${p3.newFromLabel} — ${p3.tier24.label}</div>
+        ${p3.tier24.rows.map(r=>`
+          <div class="compare-row">
+            <span class="code">${r.code}</span>
+            <span class="before">${r.before}</span>
+            <span class="arrow">→</span>
+            <span class="after">${r.after}</span>
+          </div>
+        `).join('')}
+        <div class="under24-row">
+          <span>${p3.under24.label}</span>
+          <span class="amt">${p3.under24.fee}</span>
+        </div>
+      </div>
+    `;
+    const cta3 = document.createElement('a');
+    cta3.className = 'btn btn-primary plan-cta';
+    cta3.href = data.zaloLink; cta3.target = '_blank'; cta3.rel = 'noopener';
+    cta3.textContent = 'Đặt lịch lắp Camera qua Zalo';
+    card3.appendChild(cta3);
+    grid.appendChild(card3);
+  })();
+
+  /* ---- Cuộn mượt tới mục bằng JS thay vì để trình duyệt điều hướng theo href="#..." ---- */
+  document.querySelectorAll('a[href^="#"]').forEach(link=>{
+    link.addEventListener('click', function(e){
+      const targetId = this.getAttribute('href').slice(1);
+      const target = document.getElementById(targetId);
+      if(target){
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  const main = document.getElementById('categories');
+  data.categories.forEach(cat=>{
+    const section = document.createElement('section');
+    section.className = 'category';
+    section.id = cat.id;
+
+    const wrap = document.createElement('div');
+    wrap.className = 'wrap';
+
+    const head = document.createElement('div');
+    head.className = 'cat-head';
+    head.innerHTML = `
+      <span class="eyebrow ${cat.accent}">${cat.eyebrow}</span>
+      <h2>${cat.title}</h2>
+      <p>${cat.description}</p>
+    `;
+    wrap.appendChild(head);
+
+    const grid = document.createElement('div');
+    grid.className = 'plans-grid';
+
+    cat.plans.forEach((plan, i)=>{
+      const card = document.createElement('div');
+      card.className = 'plan-card accent-' + cat.accent + (plan.highlight ? ' is-highlight' : '');
+      card.innerHTML = `
+        ${plan.highlight ? '<span class="plan-badge">Phổ biến nhất</span>' : ''}
+        <span class="tier-badge">GÓI 0${i+1}</span>
+        <div class="plan-name">${plan.name}</div>
+        <div class="plan-price">
+          <span class="amount mono">${plan.price}</span>
+          <span class="unit">${plan.unit}</span>
+        </div>
+        <ul class="plan-features">
+          ${plan.features.map(f=>`<li>${f}</li>`).join('')}
+        </ul>
+      `;
+      const cta = document.createElement('a');
+      cta.className = 'btn btn-primary plan-cta';
+      cta.href = data.zaloLink;
+      cta.target = '_blank';
+      cta.rel = 'noopener';
+      cta.textContent = 'Đặt gói qua Zalo';
+      card.appendChild(cta);
+      grid.appendChild(card);
+    });
+
+    wrap.appendChild(grid);
+    section.appendChild(wrap);
+    main.appendChild(section);
+  });
+})();
+</script>
+
+</body>
+</html>
